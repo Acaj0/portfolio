@@ -1,35 +1,50 @@
 "use client"
 
-import { Briefcase, Calendar, MapPin, Globe } from "lucide-react"
-import Image from "next/image"
+import { Briefcase, Calendar, MapPin } from "lucide-react"
 import { motion } from "framer-motion"
 import AnimatedSectionHeader from "./AnimatedSectionHeader"
 
 export default function Experience() {
   const experiences = [
     {
-      company: "Your Current Company",
-      location: "Brazil",
-      period: "Present",
-      role: "Frontend Developer",
-      responsibilities: [
-        "Developing modern web applications using React and Next.js",
-        "Implementing responsive designs with Tailwind CSS and Bootstrap",
-        "Working with TypeScript for type-safe development",
-        "Collaborating with teams using Git and GitHub",
-        "Building and maintaining RESTful APIs",
+      company: "RedeFlex Comércio e Serviço de Telefonia Ltda",
+      location: "Cuiabá, Mato Grosso, Brasil",
+      period: "Dezembro 2024 - Presente",
+      role: "Estagiário de Desenvolvimento",
+      type: "Presencial",
+      responsabilidades: [
+        "Apoio à equipe de desenvolvimento em tarefas específicas de codificação e testes de software",
+        "Desenvolvimento com ASP.NET Core e C#",
+        "Gerenciamento de banco de dados com SQL Server",
+        "Implementação de designs responsivos com Bootstrap",
+        "Parte do time de sustentação de sistemas",
       ],
+      tecnologias: ["C#", ".NET Framework", "SQL Server", "Bootstrap"],
     },
-    // Add more experiences as needed
+    {
+      company: "Lumen Desenvolvimento Web",
+      location: "Cuiabá, Mato Grosso, Brasil",
+      period: "Março 2024 - Presente",
+      role: "Desenvolvedor Web",
+      type: "Remoto",
+      responsabilidades: [
+        "Desenvolvimento de aplicações web modernas com Next.js e TypeScript",
+        "Implementação de designs responsivos com Tailwind CSS",
+        "Construção e manutenção de serviços backend com Node.js",
+        "Suporte e atendimento ao cliente",
+        "Gestão de projetos autônomos de desenvolvimento web",
+      ],
+      tecnologias: ["Next.js", "TypeScript", "Tailwind CSS", "Node.js"],
+    },
   ]
 
   return (
     <section
-      id="experience"
-      className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-indigo-900 transition-colors duration-300 overflow-hidden relative"
+      id="experiencia"
+      className="py-20  dark:from-gray-900 dark:to-indigo-900 transition-colors duration-300 overflow-hidden relative"
     >
       <div className="container mx-auto px-6 relative z-10">
-        <AnimatedSectionHeader title="Professional Experience" />
+        <AnimatedSectionHeader title="Experiência Profissional" />
         <div className="space-y-16">
           {experiences.map((exp, index) => (
             <motion.div
@@ -45,13 +60,10 @@ export default function Experience() {
                 transition-transform duration-300 group-hover:scale-110"
               ></div>
               <div className="relative z-10">
-                <h3 className="text-2xl font-semibold mb-2 dark:text-white flex items-center">
-                  {exp.company === "Freelance" ? <Globe className="w-6 h-6 mr-2 text-blue-500" /> : null}
-                  {exp.company}
-                </h3>
+                <h3 className="text-2xl font-semibold mb-2 dark:text-white flex items-center">{exp.company}</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4 flex items-center">
                   <MapPin className="w-4 h-4 mr-2" />
-                  {exp.location}
+                  {exp.location} • {exp.type}
                 </p>
                 <p className="text-gray-600 dark:text-gray-300 mb-4 flex items-center">
                   <Calendar className="w-4 h-4 mr-2" />
@@ -61,14 +73,24 @@ export default function Experience() {
                   <Briefcase className="w-5 h-5 mr-2" />
                   {exp.role}
                 </p>
-                <ul className="list-none space-y-2">
-                  {exp.responsibilities.map((resp, idx) => (
+                <ul className="list-none space-y-2 mb-4">
+                  {exp.responsabilidades.map((resp, idx) => (
                     <li key={idx} className="text-gray-700 dark:text-gray-300 flex items-start">
                       <span className="text-blue-500 mr-2">•</span>
                       {resp}
                     </li>
                   ))}
                 </ul>
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {exp.tecnologias.map((tech, idx) => (
+                    <span
+                      key={idx}
+                      className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 rounded-full text-sm"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </motion.div>
           ))}

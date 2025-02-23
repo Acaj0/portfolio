@@ -25,14 +25,14 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen relative overflow-hidden bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-indigo-900 dark:to-purple-900"
+      className="min-h-screen relative overflow-hidden  "
     >
       <div className="absolute inset-0 z-0">
         <CodePattern />
       </div>
 
       <div className="absolute inset-0 z-0 opacity-30">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0029FF] via-indigo-800 to-[#20028a] animate-gradient-x"></div>
+        <div className="absolute inset-0 ] animate-gradient-x"></div>
       </div>
 
       <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
@@ -43,7 +43,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#0029FF] to-[#8C00FF] dark:from-[#89a6fe] dark:to-[#ffffff]">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#0029FF] to-[#4d99f1] dark:from-[#89a6fe] dark:to-[#ffffff]">
               Antonio Carlos
             </h1>
             <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-gray-700 dark:text-gray-300">
@@ -77,7 +77,7 @@ export default function Hero() {
             </div>
             <motion.button
               onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#0029FF] to-[#8C00FF] text-white rounded-full hover:from-[#0024DB] hover:to-[#7800DB] transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#0029FF] to-[#4d99f1] text-white rounded-full hover:from-[#0024DB] hover:to-[#7800DB] transition-all duration-300 shadow-lg hover:shadow-xl"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -93,8 +93,8 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="relative w-72 h-72 md:w-96 md:h-96 mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#0029FF] to-[#8C00FF] rounded-3xl transform rotate-6 opacity-50"></div>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#8C00FF] to-[#0029FF] rounded-3xl transform -rotate-6 opacity-50"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0029FF] to-[#4d99f1] rounded-3xl transform rotate-6 opacity-50"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#4d99f1] to-[#0029FF] rounded-3xl transform -rotate-6 opacity-50"></div>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image src="/eu.jpg" alt="Antonio Carlos" width={384} height={384} className="object-cover" priority />
               </div>
