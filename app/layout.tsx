@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata = {
   title: "Antonio Carlos - Desenvolvedor Frontend",
   description:
-    "Portfólio de Antonio Carlos, um desenvolvedor frontend apaixonado do Brasil especializado em tecnologias web modernas.",
+    "Portfólio de Antonio Carlos, um desenvolvedor frontend apaixonado, especializado em tecnologias web modernas.",
 }
 
 export default function RootLayout({
