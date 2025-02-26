@@ -35,7 +35,7 @@ export default function Hero() {
         <div className="absolute inset-0 ] animate-gradient-x"></div>
       </div>
 
-      <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
+      <div className="container mx-auto px-6 pt-6 md:pt-32 pb-20 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           <motion.div
             className="lg:w-1/2 text-center lg:text-left"
