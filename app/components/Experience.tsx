@@ -5,19 +5,33 @@ import { motion } from "framer-motion"
 import AnimatedSectionHeader from "./AnimatedSectionHeader"
 
 export default function Experience() {
-  const experiences = [
+const experiences = [
+    {
+      company: "Knowalla",
+      location: "Califórnia, EUA",
+      period: "Março 2025 - Presente",
+      role: "Desenvolvedor Frontend",
+      type: "Remoto",
+      responsabilidades: [
+        "Atuação como desenvolvedor em uma EdTech internacional, com foco principal em front-end usando Next.js e Tailwind CSS",
+        "Responsável pela criação de CRUDs, modelagem de tabelas e integrações no backend com Supabase e Drizzle ORM",
+        "Desenvolvimento de projetos contínuos (35h semanais), com autonomia para estruturar a UI do zero, criar experiências de usuário a partir de mockups simples",
+        "Tomada de decisões de design com base nas necessidades do produto",
+      ],
+      tecnologias: ["Next.js", "Tailwind CSS", "Supabase", "Drizzle ORM", "React", "TypeScript", "Git", "Scrum"],
+    },
     {
       company: "RedeFlex Comércio e Serviço de Telefonia Ltda",
       location: "Cuiabá, Mato Grosso, Brasil",
-      period: "Dezembro 2024 - Presente",
-      role: "Estagiário de Desenvolvimento",
+      period: "Dezembro 2024 - Maio 2025",
+      role: "Desenvolvedor Web",
       type: "Presencial",
       responsabilidades: [
+        "Parte do time de sustentação de sistemas",
         "Apoio à equipe de desenvolvimento em tarefas específicas de codificação e testes de software",
         "Desenvolvimento com ASP.NET Core e C#",
         "Gerenciamento de banco de dados com SQL Server",
         "Implementação de designs responsivos com Bootstrap",
-        "Parte do time de sustentação de sistemas",
       ],
       tecnologias: ["C#", ".NET Framework", "SQL Server", "Bootstrap"],
     },
@@ -37,7 +51,6 @@ export default function Experience() {
       tecnologias: ["Next.js", "TypeScript", "Tailwind CSS", "Node.js"],
     },
   ]
-
   return (
     <section
       id="experiencia"
