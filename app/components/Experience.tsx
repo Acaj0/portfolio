@@ -7,7 +7,7 @@ import AnimatedSectionHeader from "./AnimatedSectionHeader"
 export default function Experience() {
 const experiences = [
     {
-      company: "Knowalla",
+      company: "Confidential",
       location: "Califórnia, EUA",
       period: "Março 2025 - Presente",
       role: "Desenvolvedor Frontend",
